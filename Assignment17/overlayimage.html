@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Delights - Artisan Bakes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --bakery-orange: #2225e6;
+        }
+        body { font-family: 'Poppins', sans-serif; }
+        h1 { font-family: 'Playfair Display', serif; }
+
+        a i { transition: transform 0.3s; } 
+    a:hover i { transform: scale(1.2); }
+     .bg-brown {
+  background-color: #632f0b !important; /* SaddleBrown */
+}
+
+       
+        
+
+        /* 2. HERO SECTION WITH FULL BACKGROUND */
+        .hero-fullscreen {
+            position: relative;
+            min-height: 100vh; /* Takes full screen height */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('./Images/Img-page1/Rectangle\ 10.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center; /* Centers content vertically */
+            color: white;
+            overflow: hidden;
+        }
+
+        
+    
+
+
+/* Background Image */
+.card-bg-img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* Overlay Image (The floating picture on top of the background) */
+.card-overlay-img {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Size of your floating overlay */
+    z-index: 2;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+
+/* THE TEXT AREA (Separate from the images) */
+.card-text-overlay {
+    position: absolute;
+     
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    padding: 60px 20px;
+    z-index: 4; /* Sits above all images */
+    color: rgb(128, 148, 16);
+}
+
+.card-title-bakery {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #5d4037;
+    margin-bottom: 5px;
+}
+
+.card-desc-bakery {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0;
+}
+    .fw-bold text-warning
+    {
+        padding-top: 10px;
+        color: chartreuse;
+    }
+    
+   
+    .cta-bakery-section {
+        /* 1. Background Image Handling */
+        background-image: url('./Images/Discount/Rectangle\ 45.png'); 
+        background-size: cover;
+        background-position: center center;
+        min-height: 420px;
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center; /* Vertically centered */
+        justify-content: center; /* Horizontally centered */
+        text-align: center;
+        padding: 40px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    }
+
+    .cta-content {
+        max-width: 500px; /* Prevents text from hitting the bread images */
+    }
+
+    .cta-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 5vw, 3.5rem); /* Makes text size fluid */
+        color: #8D4925;
+        font-weight: 700;
+        font-style: italic;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+    .mynavbar {
+            position: absolute; /* Sits on top of the hero */
+            width: 100%;
+            z-index: 10;
+            background: transparent !important;
+            padding: 20px 0;
+            color: rgb(14, 13, 13);
+        }
+
+        .mynav-link { 
+            color: #111111; /* White text looks better on dark backgrounds */
+            font-weight: 500;
+        }
+
+        /* 2. HERO SECTION WITH FULL BACKGROUND */
+        .myhero-fullscreen {
+            position: relative;
+            min-height: 100vh; /* Takes full screen height */
+           
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center; /* Centers content vertically */
+            color: rgb(10, 10, 10);
+            overflow: hidden;
+        }
+
+    .bakery-card {
+    width: 360px;
+    height: 410px;
+    border-color: #e67e22;
+    border-width: 3px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* THE IMAGE BOX (Where the picture-on-picture happens) */
+.card-image-box {
+    position: relative;
+    width: 100%;
+    height: 380px; /* Takes up most of the card height */
+    overflow: hidden;
+}
+
+/* Background Image */
+.card-bg-img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* 1. Background Image Handling */
+    .about-section {
+        background-image: url('./Images/About/Rectangle\ 41.png');
+        background-size: cover;
+        background-position: center center;
+        min-height: 420px;
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center; /* Vertically centered */
+        justify-content: center; /* Horizontally centered */
+        text-align: center;
+        padding: 40px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    }
+    .about-content {
+        max-width: 500px; /* Prevents text from hitting the bread images */
+         color: rgba(245, 245, 245, 1);
+    }
+
+    .about-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(1rem, 2vw, 2rem); /* Makes text size fluid */
+        color: rgba(245, 245, 245, 1);
+        font-weight: 700;
+        font-style: italic;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+   
+   
+footer {
+  background: url("images/footer-texture.jpg") center/cover no-repeat;
+}
+
+    </style>
+</head>
+<body>
+  <div class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-warning" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-dark" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-warning" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-dark" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-warning" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-dark" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+
+   
+  <div class="d-flex justify-content-center">
+  <a href="https://facebook.com" target="_blank" class="mx-4 text-primary">
+    <i class="bi bi-facebook" style="font-size: 2rem;"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" class="mx-4 text-info">
+    <i class="bi bi-twitter" style="font-size: 2rem;"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" class="mx-4 text-danger">
+    <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" class="mx-4 text-primary">
+    <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
+  </a>
+  <a href="https://web.whatsapp.com/" target="_blank" class="mx-4 text-success">
+    <i class="bi bi-whatsapp" style="font-size: 2rem;"></i>
+  </a>
+</div>
+
+      <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-brown p-2 mb-2">
+  <div class="container">
+    <a class="navbar-brand text-white" href="#">
+      <img src="./Images/Img-page1/Bakery-Logo.png" alt="Bakery Logo" height="60" width="60" class="d-inline-block align-top">
+    </a>
+
+    <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#">Services</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img src="./Images/Img-page1/P1.png" class="d-block w-300" alt="...">
+       <div class="carousel-caption d-none d-md-block">
+            <h4 class = "text-brown">Delicious Cafe</h4>
+        <h2 class = "text-white">Sweet Treats, 
+                                Perfect Eats</h2>
+    
+        <button type="button" class="btn btn-primary"> Read More</button>
+        <button type="button" class="btn btn-success"> Orders </button>
+        <button type="button" class="btn btn-danger"> Complain </button>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="1000">
+      <img src="./Images/Img-page1/p2.png" class="d-block w-300" alt="...">
+       <div class="carousel-caption d-none d-md-block">
+       <h4 class = "text-brown">Delicious Cafe</h4>
+        <h2 class = "text-white">Sweet Treats, 
+                                Perfect Eats</h2>
+    
+           <button type="button" class="btn btn-primary"> Read More</button>
+        <button type="button" class="btn btn-success"> Orders </button>
+        <button type="button" class="btn btn-danger"> Complain </button>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="1000">
+      <img src="./Images/Img-page1/P3.png" class="d-block w-300" alt="...">
+       <div class="carousel-caption d-none d-md-block">
+        <h4 class = "text-brown">Delicious Cafe</h4>
+        <h2 class = "text-white">Sweet Treats, 
+                                Perfect Eats</h2>
+    
+           <button type="button" class="btn btn-primary"> Read More</button>
+        <button type="button" class="btn btn-success"> Orders </button>
+         <button type="button" class="btn btn-danger"> Complain </button>
+      </div>
+    </div>
+    
+    
+    <div class="carousel-item" data-bs-interval="1000">
+      <img src="./Images/Img-page1/CoffeeBag.png" class="d-block w-300" alt="...">
+       <div class="carousel-caption d-none d-md-block">
+        <h4 class = "text-brown">Delicious Cafe</h4>
+        <h2 class = "text-white">Sweet Treats, 
+                                Perfect Eats</h2>
+    
+           <button type="button" class="btn btn-primary"> Read More</button>
+        <button type="button" class="btn btn-success"> Orders </button>
+         <button type="button" class="btn btn-danger"> Complain </button>
+      </div>
+    </div>
+    
+
+  </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </div>
+  </div>
+
+    <section id="menu" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/img-card/bg-card.png" class="card-bg-img" alt="Bread">
+                        <img src="./Images/img-card/biscuits1.png" class="card-overlay-img" alt="Overlay Image">
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                              <span class="fw-bold text-warning">$6.00</span>
+                              <br></br>                     
+                        
+                        <p class="card-desc-bakery">Whole Grain <br></br>
+                                                        Bread</p>
+                                <br></br>
+                            <button type="button" class="btn btn-primary"> Add</button>  
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/img-card/bg-card.png" class="card-bg-img" alt="Bread">
+                        <img src="./Images/img-card/Biscuits-2.png" class="card-overlay-img" alt="Overlay Image">
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                              <span class="fw-bold text-warning">$6.00</span>
+                                                   
+                        
+                        <p class="card-desc-bakery">Whole Grain 
+                                                        Bread</p>
+                            <button type="button" class="btn btn-primary"> Add</button>                         
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/img-card/bg-card.png" class="card-bg-img" alt="Bread">
+                        <img src="./Images/img-card/Biscuits-3 (1).png" class="card-overlay-img" alt="Overlay Image">
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                              <span class="fw-bold text-warning">$6.00</span>
+                                                   
+                        
+                        <p class="card-desc-bakery">Whole Grain 
+                                                        Bread</p>
+                             <button type="button" class="btn btn-primary"> Add</button>                        
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/img-card/bg-card.png" class="card-bg-img" alt="Bread">
+                        <img src="./Images/img-card/Biscuits-4.png" class="card-overlay-img" alt="Overlay Image">
+                        
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                              <span class="fw-bold text-warning">$6.00</span>
+                                                   
+                        
+                        <p class="card-desc-bakery">Whole Grain 
+                                                        Bread</p>
+                          <button type="button" class="btn btn-primary"> Add</button>                           
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/img-card/bg-card.png" class="card-bg-img" alt="Bread">
+                        <img src="./Images/img-card/Biscuits-5.png" class="card-overlay-img" alt="Overlay Image">
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                              <span class="fw-bold text-warning">$6.00</span>
+                                                   
+                        
+                        <p class="card-desc-bakery">Whole Grain 
+                                                        Bread</p>
+                            <button type="button" class="btn btn-primary"> Add</button>                            
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/img-card/bg-card.png" class="card-bg-img" alt="Bread">
+                        <img src="./Images/img-card/Biscuits=6.png" class="card-overlay-img" alt="Overlay Image">
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                              <span class="fw-bold text-warning">$6.00</span>
+                                                   
+                        
+                        <p class="card-desc-bakery">Whole Grain 
+                                                        Bread</p>
+                             <button type="button" class="btn btn-primary"> Add </button>                           
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+            
+            </div>
+    </div>
+</section>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-11">
+            
+            <section class="cta-bakery-section">
+                <div class="cta-content">
+                    <h2 class="cta-title">20% Off Your <br> First Order</h2>
+                    
+                    <p class="cta-subtitle">
+                        Suspendisse ac rhoncus nisl, eu tempor urna. <br> 
+                        Curabitur vel bibenjgg.
+                    </p>
+                    
+                    <a href="#" class="btn btn-bakery-cta">Learn More</a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.min.js"></script>
+
+ <nav class="mynavbar mynav-link">
+    <div class="container">
+        
+        <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="hero-fullscreen">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link px-3" href="#"> Home </a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#"> blog </a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#"> Contact Us </a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#"> Services</a></li>
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="myhero-fullscreen">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    
+                    
+                    </p>
+                    <div class="d-flex gap-3">
+                                        </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.min.js"></script>
+
+    <section id="menu" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gakkery/Rectangle 20.png" class="card-bg-img" alt="Bread">
+                        
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                         
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gakkery/Rectangle 21 (1).png" class="card-bg-img" alt="Bread">
+                        
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gakkery/Rectangle 22.png" class="card-bg-img" alt="Bread">
+                        
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                             
+                                                   
+                        
+                     
+                                                  
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gakkery/Rectangle 25.png" class="card-bg-img" alt="Bread">
+                        
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                        </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gakkery/Rectangle 23.png" class="card-bg-img" alt="Bread">
+                        
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                           
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gakkery/Rectangle 24.png" class="card-bg-img" alt="Bread">
+                        
+                    </div>
+
+                    <div class="card-text-overlay">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                         
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+
+       <section id ="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-11">
+            
+            <section class="about-section">
+                <div class="about-content">
+                    <h1> About us </h1>
+                        <p class="about-title">
+                        Suspendisse ac rhoncus nisl,<br>
+                        eu tempor urna. Curabitur vel<br>
+                        bibendum lorem. Morbi convallis.
+                    </p>
+                    
+                <button class="btn btn-bakery btn-lg"> Learn More </button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div> 
+</section>
+
+
+<section id="menu" class="py-5" style="background-color: #377bbe;">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gallery-A/Rectangle 156.png" alt="Bread">
+                        <h5 class = "card-title"> Doughnuts   $8 </h5>
+                     </div>
+                            <div class="card-text">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                         
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gallery-A/Rectangle 153.png" alt="Bread">
+                        <h5 class= "card-title"> Brownies $8 </h5>
+                    </div>
+
+                    <div class="card-text">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+                <div class="card bakery-card">
+                    <div class="card-image-box">
+                        <img src="./Images/Gallery-A/Rectangle 154.png" alt="Bread">
+                        
+                        <h5 class="card-title "> Puff Pastry  $8 </h5>
+                        <div class="card-text">
+                            <div class="d-flex justify-content-between align-items-center mb-1"></div>
+                        </div>
+                     </div>
+                     </div>
+                </div>
+                </div>
+            </section>
+
+                
+  <section id ="container ms-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-11">
+            
+            <section class="about-section">
+                <div class="about-content">
+                    <h1> Contact us </h1>
+                        <p class="about-title">
+                        Suspendisse ac rhoncus nisl,<br>
+                        eu tempor urna. Curabitur vel<br>
+                        bibendum lorem. Morbi convallis.
+                    </p>
+                    
+                <button class="btn btn-bakery btn-lg"> Learn More </button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+  <footer class="text-light mt-5 pb-3" style="background-image: url('./Images/footer/footer-bg.png'); background-size:cover;">
+<div class="container">
+
+<!-- Top Row -->
+<div class="row align-items-center py-4">
+
+<div class="col-md-6 text-center text-md-start">
+<img src="./Images/Img-page1/Modrino__2_-removebg-preview 1.png" alt="Logo" style="max-width:120px;">
+</div>
+
+<div class="col-md-6 text-center text-md-end">
+<span class="me-3">Follow us</span>
+
+<a href="#" class="mx-2 text-primary">
+<i class="bi bi-facebook fs-4"></i>
+</a>
+
+<a href="#" class="mx-2 text-info">
+<i class="bi bi-twitter fs-4"></i>
+</a>
+
+<a href="#" class="mx-2 text-danger">
+<i class="bi bi-instagram fs-4"></i>
+</a>
+
+<a href="#" class="mx-2 text-primary">
+<i class="bi bi-linkedin fs-4"></i>
+</a>
+
+<a href="#" class="mx-2 text-success">
+<i class="bi bi-whatsapp fs-4"></i>
+</a>
+
+</div>
+</div>
+
+<hr class="border-secondary">
+
+<!-- Middle Row -->
+<div class="row gy-4">
+
+<!-- About -->
+<div class="col-lg-4 col-md-6">
+<h5 class="text-warning">About Us</h5>
+<p class="mb-1">0092-335-2595181</p>
+<p class="mb-1">khurram.mansoor.developer@gmail.com</p>
+<p class="mb-1">Hyderabad Sindh, Pakistan</p>
+<p>Pakistan</p>
+</div>
+
+<!-- Explore -->
+<div class="col-lg-2 col-md-3">
+<h5 class="text-warning">Explore</h5>
+<ul class="list-unstyled">
+<li><a href="#" class="text-light text-decoration-none">Home</a></li>
+<li><a href="#" class="text-light text-decoration-none">Blog</a></li>
+<li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+<li><a href="#" class="text-light text-decoration-none">Services</a></li>
+</ul>
+</div>
+
+<!-- Recent News -->
+<div class="col-lg-4">
+<h5 class="text-warning">Recent News</h5>
+
+<div class="d-flex mb-3">
+<img src="./Images/footer/coolies.png" class="rounded me-3" width="60">
+<div>
+<small class="text-muted">June 14, 2024</small>
+<p class="mb-0">Puff pastry bliss.</p>
+</div>
+</div>
+
+<div class="d-flex">
+<img src="./Images/footer/Paistry.png" class="rounded me-3" width="60">
+<div>
+<small class="text-muted">June 14, 2024</small>
+<p class="mb-0">Puff pastry bliss.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<hr class="border-secondary">
+
+<!-- Bottom Row -->
+<div class="row">
+<div class="col text-center">
+<p class="small mb-0">© 2024 Bake House. All rights reserved</p>
+</div>
+</div>
+
+</div>
+</footer>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</body>
+</html>
